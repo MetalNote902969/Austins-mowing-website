@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Austin's Mowing and Lawn Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+    header p {
+      font-size: 1.2em;
+      font-style: italic;
+    }
+    section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+    .services li {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #4CAF50;
+    }
+    .contact form {
+      display: grid;
+      gap: 15px;
+    }
+    input, textarea, button {
+      font-size: 1em;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    iframe {
+      width: 100%;
+      border: 0;
+      height: 300px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="Austin's Mowing and Lawn Services Logo" style="max-width: 400px; height: auto;">
+    <h1>Austin's Mowing and Lawn Services</h1>
+    <p>"A Fresh Cut From a Kid Who Cares."</p>
+  </header>  
+  
+
+<section class="services">
+  <h2>Services Offered</h2>
+  <ul>
+    <li>Lawn Mowing</li>
+    <li>Weed Removal</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Request a Quote</h2>
+  <p>Fill out the form below and I’ll get back to you shortly.</p>
+  
+  <!-- Original code integrated with Formspree -->
+  <form id="quoteForm" action="https://formspree.io/f/manodjdz" method="POST">
+    <label>
+      Your Name:
+      <input type="text" name="name" placeholder="Your Name" required>
+    </label>
+    
+    <label>
+      Your email:
+      <input type="email" name="email" placeholder="Your Email Address" required>
+    </label>
+    
+    <label>
+      Phone Number (Optional):
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+    </label>
+    
+    <label>
+      Your message:
+      <textarea name="message" placeholder="Tell me about your lawn..." required></textarea>
+    </label>
+    
+    <button type="submit">Send Request</button>
+    <p id="formResponse"></p>
+  </form>
+</section>
+
+<section class="map">
+  <h2>Service Area – Castle Rock, CO</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.265547181674!2d-104.85962742432533!3d39.372212971622794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c9f5c07d259ab%3A0x1589943fc059fdf5!2sCastle%20Rock%2C%20CO!5e0!3m2!1sen!2sus!4v1715446482006!5m2!1sen!2sus"
+    width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+<footer>
+  <p>&copy; 2025 Austin's Mowing and Lawn Services</p>
+  <p>Contact: <a href="mailto:austins2121@outlook.com" style="color:#9f9;">austins2121@outlook.com</a></p>
+</footer>
+
+<script>
+  document.getElementById("quoteForm").addEventListener("submit", function(e) {
+    // Show a success message without stopping the form from submitting
+    document.getElementById("formResponse").textContent = "Thanks! I’ll contact you soon.";
+  });
+</script>
+
+</body>
+</html>
